@@ -1,0 +1,16 @@
+@mixin inf{
+    display: flex;
+    justify-content: space-between;
+    color: lightgrey;
+    div{
+        display: flex;
+        align-items: center;
+    }
+}
+
+@mixin button{
+    background-color: $main-color;
+    font-size: 1.5em;
+    padding: 4% 14%;
+    border-radius: 50px;
+}

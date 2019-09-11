@@ -1,0 +1,38 @@
+article{
+    background: url('../images/common/bearBears.jpg') no-repeat;
+    background-size: cover;
+    background-position-y: 50%;
+    height: 60vh;
+    .wrapper{
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: .4);
+        display: flex;
+        align-items: center;
+        .content{
+            margin-left: 7%;
+            h2{
+                color: $main-color;
+            }
+            p{
+                width: 61%;
+                font-size: 4em;
+                color: $white;
+            }
+            &__info{
+                @include inf;
+                width: 22%;
+                margin: 2% 0;
+            }
+            &__tools{
+                display: flex;
+                justify-content: space-between;
+                width: 15%;
+                div{
+                    @include button;
+                }
+            }
+        }
+    }
+    
+}
