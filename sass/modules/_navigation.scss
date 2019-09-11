@@ -1,0 +1,46 @@
+.header__logo{
+    flex-basis: 8%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid $grey;
+    img{
+        width: 85%;
+    }
+}
+.header__menu{
+    flex-basis: 87%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-right: 2px solid $grey;
+    border-left: 2px solid $grey;
+    select{
+        width: 6%;
+        height: 28px;
+        margin-left: 15px;
+        background-color: $main-color;
+        font-weight: bold;
+        border: none;
+        border-radius: 50px;
+    }
+    ul{
+        width: 28%;
+        display: flex;
+        justify-content: space-around;
+        font-weight: bold;
+    }
+}
+.header__tools{
+    flex-basis: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header__leftMenu{
+    width: 23px;
+    height: 94vh;
+    position: fixed;
+    top: 6%;
+    border-right: 1px solid $grey;
+    padding: 1%;
+}
