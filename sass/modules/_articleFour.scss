@@ -1,0 +1,29 @@
+.four{
+    width: 86%;
+    margin: 0 auto;
+    &__title{
+        color: $main-color;
+        margin: 5% 0;
+    }
+    &__wrapper{
+        background: url("../images/common/cute-brain-cartoon2.jpeg");
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        background-size: cover;
+        background-position-y: 50%;
+        .text{
+            margin-left: 4%;
+            width: 61%;
+            @include text;
+            p{
+                width: 65%;
+            }
+            &__tools{
+                div{
+                }
+            }
+        }
+    }
+}

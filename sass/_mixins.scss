@@ -7,10 +7,75 @@
         align-items: center;
     }
 }
+@mixin wigth_height{
+    width: 100%;
+    height: 100%;
+}
+
+@mixin flex_between{
+    display: flex;
+    justify-content: space-between;
+}
 
 @mixin button{
     background-color: $main-color;
     font-size: 1.5em;
-    padding: 4% 14%;
     border-radius: 50px;
+}
+
+@mixin container{
+    width: 86%;
+    margin: 0 auto;
+    @include flex_between;
+    &__block{
+        width: 30%;
+        h2{
+            padding: 3% 0 ;
+            color: $main-color;
+        }
+        .info{
+            @include flex_between;
+            .bookmark{
+                position: relative;
+                top: -15px;
+                right: 25px;
+            }
+        }
+        p{
+            font-size: 1.6em;
+            font-weight: bold;
+            width: 74%;
+        }
+    }
+}
+
+@mixin text{
+    border: 2px solid black;
+    background: $white;
+    .text__info{
+        @include flex_between;
+        padding: 4%;
+        width: 39%;
+    }
+    p{
+        padding: 4%;
+        font-size: 3.5em;
+    }
+    .text__tools{
+        display: flex;
+        width: 91%;
+        margin: 0 auto;
+
+
+        div{
+            @include button;
+            padding: 1% 3%;
+        }
+        img{
+            position: relative;
+            bottom: -81px;
+            left: 500px;
+        }
+        
+    }
 }

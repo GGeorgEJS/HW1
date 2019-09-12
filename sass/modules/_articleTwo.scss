@@ -1,0 +1,30 @@
+.two{
+    .wrapper{
+        display: flex;
+        padding: 7%;
+        .img{
+            width: 50%;
+            border-bottom: 3px solid red;
+            img{
+                @include  wigth_height;
+            }
+        }
+        .content-block{
+            width: 42%;
+            display: flex;
+            flex-direction: column;
+            &__title{
+                align-self: flex-end;
+                color: $main-color;
+            }
+            .text{
+                @include text;
+                height: 100%;
+                margin: 0 0 -4% -7%;
+                p{
+                    width: 125%;
+                }
+            }
+        }
+    }
+}
