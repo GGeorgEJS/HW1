@@ -16,13 +16,10 @@
         .text{
             margin-left: 4%;
             width: 61%;
+            height: 59%;
             @include text;
             p{
                 width: 65%;
-            }
-            &__tools{
-                div{
-                }
             }
         }
     }

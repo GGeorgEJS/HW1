@@ -1,0 +1,14 @@
+.six{
+    .wrapper{
+        @include wrapper;
+        direction: rtl;
+        .content-block{
+            .text{
+                margin: 0 -7% -4% 0;
+                &__info{
+                    direction: ltr;
+                }
+            }
+        }
+    }
+}

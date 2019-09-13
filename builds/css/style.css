@@ -114,8 +114,7 @@ header {
     .two .wrapper .content-block .text {
       border: 2px solid black;
       background: white;
-      height: 100%;
-      margin: 0 0 -4% -7%; }
+      height: 100%; }
       .two .wrapper .content-block .text .text__info {
         display: flex;
         justify-content: space-between;
@@ -123,9 +122,10 @@ header {
         width: 39%; }
       .two .wrapper .content-block .text p {
         padding: 4%;
-        font-size: 3.5em; }
+        font-size: 3.2em; }
       .two .wrapper .content-block .text .text__tools {
         display: flex;
+        justify-content: space-between;
         width: 91%;
         margin: 0 auto; }
         .two .wrapper .content-block .text .text__tools div {
@@ -135,10 +135,12 @@ header {
           padding: 1% 3%; }
         .two .wrapper .content-block .text .text__tools img {
           position: relative;
-          bottom: -81px;
-          left: 500px; }
+          bottom: -92px; }
       .two .wrapper .content-block .text p {
-        width: 125%; }
+        width: 125%;
+        font-weight: bold; }
+  .two .wrapper .content-block .text {
+    margin: 0 0 -4% -7%; }
 
 .container {
   width: 86%;
@@ -179,6 +181,7 @@ header {
     .four__wrapper .text {
       margin-left: 4%;
       width: 61%;
+      height: 59%;
       border: 2px solid black;
       background: white; }
       .four__wrapper .text .text__info {
@@ -188,9 +191,10 @@ header {
         width: 39%; }
       .four__wrapper .text p {
         padding: 4%;
-        font-size: 3.5em; }
+        font-size: 3.2em; }
       .four__wrapper .text .text__tools {
         display: flex;
+        justify-content: space-between;
         width: 91%;
         margin: 0 auto; }
         .four__wrapper .text .text__tools div {
@@ -200,7 +204,81 @@ header {
           padding: 1% 3%; }
         .four__wrapper .text .text__tools img {
           position: relative;
-          bottom: -81px;
-          left: 500px; }
+          bottom: -92px; }
       .four__wrapper .text p {
         width: 65%; }
+
+.five {
+  background-color: #f1edec;
+  margin: 2% 0; }
+  .five .container {
+    width: 86%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; }
+    .five .container__block {
+      width: 30%; }
+      .five .container__block h2 {
+        padding: 3% 0;
+        color: #fcd600; }
+      .five .container__block .info {
+        display: flex;
+        justify-content: space-between; }
+        .five .container__block .info .bookmark {
+          position: relative;
+          top: -15px;
+          right: 25px; }
+      .five .container__block p {
+        font-size: 1.6em;
+        font-weight: bold;
+        width: 74%; }
+
+.six .wrapper {
+  display: flex;
+  padding: 7%;
+  direction: rtl; }
+  .six .wrapper .img {
+    width: 50%;
+    border-bottom: 3px solid red; }
+    .six .wrapper .img img {
+      width: 100%;
+      height: 100%; }
+  .six .wrapper .content-block {
+    width: 42%;
+    display: flex;
+    flex-direction: column; }
+    .six .wrapper .content-block__title {
+      align-self: flex-end;
+      color: #fcd600; }
+    .six .wrapper .content-block .text {
+      border: 2px solid black;
+      background: white;
+      height: 100%; }
+      .six .wrapper .content-block .text .text__info {
+        display: flex;
+        justify-content: space-between;
+        padding: 4%;
+        width: 39%; }
+      .six .wrapper .content-block .text p {
+        padding: 4%;
+        font-size: 3.2em; }
+      .six .wrapper .content-block .text .text__tools {
+        display: flex;
+        justify-content: space-between;
+        width: 91%;
+        margin: 0 auto; }
+        .six .wrapper .content-block .text .text__tools div {
+          background-color: #fcd600;
+          font-size: 1.5em;
+          border-radius: 50px;
+          padding: 1% 3%; }
+        .six .wrapper .content-block .text .text__tools img {
+          position: relative;
+          bottom: -92px; }
+      .six .wrapper .content-block .text p {
+        width: 125%;
+        font-weight: bold; }
+  .six .wrapper .content-block .text {
+    margin: 0 -7% -4% 0; }
+    .six .wrapper .content-block .text__info {
+      direction: ltr; }

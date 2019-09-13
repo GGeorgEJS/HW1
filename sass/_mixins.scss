@@ -59,10 +59,10 @@
     }
     p{
         padding: 4%;
-        font-size: 3.5em;
+        font-size: 3.2em;
     }
     .text__tools{
-        display: flex;
+        @include flex_between;
         width: 91%;
         margin: 0 auto;
 
@@ -73,9 +73,38 @@
         }
         img{
             position: relative;
-            bottom: -81px;
-            left: 500px;
+            bottom: -92px;
         }
         
     }
 }
+
+@mixin wrapper{
+    display: flex;
+    padding: 7%;
+    .img{
+        width: 50%;
+        border-bottom: 3px solid red;
+        img{
+            @include  wigth_height;
+        }
+    }
+    .content-block{
+        width: 42%;
+        display: flex;
+        flex-direction: column;
+        &__title{
+            align-self: flex-end;
+            color: $main-color;
+        }
+        .text{
+            @include text;
+            height: 100%;
+            p{
+                width: 125%;
+                font-weight: bold;
+            }
+        }
+    }
+}
+    
