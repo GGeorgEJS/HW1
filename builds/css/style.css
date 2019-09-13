@@ -18,7 +18,8 @@ header {
   flex-basis: 8%;
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid #f1edec; }
+  border-bottom: 1px solid #f1edec;
+  z-index: 1; }
   .header__logo img {
     width: 85%; }
 
@@ -53,9 +54,12 @@ header {
   height: 94vh;
   background-color: white;
   position: fixed;
-  top: 6%;
   border-right: 1px solid #f1edec;
-  padding: 1%; }
+  padding: 1%;
+  z-index: 0; }
+  .header__leftMenu img {
+    position: absolute;
+    top: 8%; }
 
 .one {
   background: url("../images/common/bearBears.jpg") no-repeat;
@@ -89,19 +93,27 @@ header {
         display: flex;
         justify-content: space-between;
         width: 15%; }
-        .one .wrapper .content__tools div {
+        .one .wrapper .content__tools .btn {
           background-color: #fcd600;
           font-size: 1.5em;
           border-radius: 50px;
           padding: 4% 14%; }
+        .one .wrapper .content__tools .img_bookmark {
+          background: url("../images/UI/bookmark_big.svg");
+          width: 23px;
+          height: 29px; }
+          .one .wrapper .content__tools .img_bookmark:hover {
+            background: url("../images/UI/bookmark_active.svg");
+            width: 26px;
+            height: 31px; }
 
 .two .wrapper {
   display: flex;
   padding: 7%; }
-  .two .wrapper .img {
+  .two .wrapper .photo {
     width: 50%;
     border-bottom: 3px solid red; }
-    .two .wrapper .img img {
+    .two .wrapper .photo img {
       width: 100%;
       height: 100%; }
   .two .wrapper .content-block {
@@ -114,7 +126,7 @@ header {
     .two .wrapper .content-block .text {
       border: 2px solid black;
       background: white;
-      height: 100%; }
+      position: relative; }
       .two .wrapper .content-block .text .text__info {
         display: flex;
         justify-content: space-between;
@@ -122,25 +134,35 @@ header {
         width: 39%; }
       .two .wrapper .content-block .text p {
         padding: 4%;
-        font-size: 3.2em; }
+        font-size: 3em; }
       .two .wrapper .content-block .text .text__tools {
         display: flex;
         justify-content: space-between;
         width: 91%;
         margin: 0 auto; }
-        .two .wrapper .content-block .text .text__tools div {
+        .two .wrapper .content-block .text .text__tools .btn {
           background-color: #fcd600;
           font-size: 1.5em;
           border-radius: 50px;
-          padding: 1% 3%; }
-        .two .wrapper .content-block .text .text__tools img {
-          position: relative;
-          bottom: -92px; }
+          padding: 1% 3%;
+          margin: 5% 0; }
+        .two .wrapper .content-block .text .text__tools .img_bookmark {
+          position: absolute;
+          bottom: -18px;
+          background: url("../images/UI/bookmark_big.svg");
+          width: 23px;
+          height: 29px; }
+          .two .wrapper .content-block .text .text__tools .img_bookmark:hover {
+            background: url("../images/UI/bookmark_active.svg");
+            width: 26px;
+            height: 31px; }
       .two .wrapper .content-block .text p {
         width: 125%;
         font-weight: bold; }
   .two .wrapper .content-block .text {
     margin: 0 0 -4% -7%; }
+    .two .wrapper .content-block .text__tools .img_bookmark {
+      right: 20px; }
 
 .container {
   width: 86%;
@@ -149,18 +171,27 @@ header {
   justify-content: space-between; }
   .container__block {
     width: 30%; }
+    .container__block .img img {
+      width: 100%; }
     .container__block h2 {
       padding: 3% 0;
       color: #fcd600; }
     .container__block .info {
       display: flex;
       justify-content: space-between; }
-      .container__block .info .bookmark {
+      .container__block .info .img_bookmark {
         position: relative;
         top: -15px;
-        right: 25px; }
+        right: 25px;
+        background: url("../images/UI/bookmark_big.svg");
+        width: 23px;
+        height: 29px; }
+        .container__block .info .img_bookmark:hover {
+          background: url("../images/UI/bookmark_active.svg");
+          width: 26px;
+          height: 31px; }
     .container__block p {
-      font-size: 1.6em;
+      font-size: 1.2em;
       font-weight: bold;
       width: 74%; }
 
@@ -180,10 +211,10 @@ header {
     background-position-y: 50%; }
     .four__wrapper .text {
       margin-left: 4%;
-      width: 61%;
-      height: 59%;
+      width: 45%;
       border: 2px solid black;
-      background: white; }
+      background: white;
+      position: relative; }
       .four__wrapper .text .text__info {
         display: flex;
         justify-content: space-between;
@@ -191,22 +222,32 @@ header {
         width: 39%; }
       .four__wrapper .text p {
         padding: 4%;
-        font-size: 3.2em; }
+        font-size: 3em; }
       .four__wrapper .text .text__tools {
         display: flex;
         justify-content: space-between;
         width: 91%;
         margin: 0 auto; }
-        .four__wrapper .text .text__tools div {
+        .four__wrapper .text .text__tools .btn {
           background-color: #fcd600;
           font-size: 1.5em;
           border-radius: 50px;
-          padding: 1% 3%; }
-        .four__wrapper .text .text__tools img {
-          position: relative;
-          bottom: -92px; }
+          padding: 1% 3%;
+          margin: 5% 0; }
+        .four__wrapper .text .text__tools .img_bookmark {
+          position: absolute;
+          bottom: -18px;
+          background: url("../images/UI/bookmark_big.svg");
+          width: 23px;
+          height: 29px; }
+          .four__wrapper .text .text__tools .img_bookmark:hover {
+            background: url("../images/UI/bookmark_active.svg");
+            width: 26px;
+            height: 31px; }
       .four__wrapper .text p {
-        width: 65%; }
+        width: 80%; }
+      .four__wrapper .text .text__tools .img_bookmark {
+        right: 20px; }
 
 .five {
   background-color: #f1edec;
@@ -218,18 +259,27 @@ header {
     justify-content: space-between; }
     .five .container__block {
       width: 30%; }
+      .five .container__block .img img {
+        width: 100%; }
       .five .container__block h2 {
         padding: 3% 0;
         color: #fcd600; }
       .five .container__block .info {
         display: flex;
         justify-content: space-between; }
-        .five .container__block .info .bookmark {
+        .five .container__block .info .img_bookmark {
           position: relative;
           top: -15px;
-          right: 25px; }
+          right: 25px;
+          background: url("../images/UI/bookmark_big.svg");
+          width: 23px;
+          height: 29px; }
+          .five .container__block .info .img_bookmark:hover {
+            background: url("../images/UI/bookmark_active.svg");
+            width: 26px;
+            height: 31px; }
       .five .container__block p {
-        font-size: 1.6em;
+        font-size: 1.2em;
         font-weight: bold;
         width: 74%; }
 
@@ -237,10 +287,10 @@ header {
   display: flex;
   padding: 7%;
   direction: rtl; }
-  .six .wrapper .img {
+  .six .wrapper .photo {
     width: 50%;
     border-bottom: 3px solid red; }
-    .six .wrapper .img img {
+    .six .wrapper .photo img {
       width: 100%;
       height: 100%; }
   .six .wrapper .content-block {
@@ -253,7 +303,7 @@ header {
     .six .wrapper .content-block .text {
       border: 2px solid black;
       background: white;
-      height: 100%; }
+      position: relative; }
       .six .wrapper .content-block .text .text__info {
         display: flex;
         justify-content: space-between;
@@ -261,20 +311,28 @@ header {
         width: 39%; }
       .six .wrapper .content-block .text p {
         padding: 4%;
-        font-size: 3.2em; }
+        font-size: 3em; }
       .six .wrapper .content-block .text .text__tools {
         display: flex;
         justify-content: space-between;
         width: 91%;
         margin: 0 auto; }
-        .six .wrapper .content-block .text .text__tools div {
+        .six .wrapper .content-block .text .text__tools .btn {
           background-color: #fcd600;
           font-size: 1.5em;
           border-radius: 50px;
-          padding: 1% 3%; }
-        .six .wrapper .content-block .text .text__tools img {
-          position: relative;
-          bottom: -92px; }
+          padding: 1% 3%;
+          margin: 5% 0; }
+        .six .wrapper .content-block .text .text__tools .img_bookmark {
+          position: absolute;
+          bottom: -18px;
+          background: url("../images/UI/bookmark_big.svg");
+          width: 23px;
+          height: 29px; }
+          .six .wrapper .content-block .text .text__tools .img_bookmark:hover {
+            background: url("../images/UI/bookmark_active.svg");
+            width: 26px;
+            height: 31px; }
       .six .wrapper .content-block .text p {
         width: 125%;
         font-weight: bold; }
@@ -282,3 +340,46 @@ header {
     margin: 0 -7% -4% 0; }
     .six .wrapper .content-block .text__info {
       direction: ltr; }
+    .six .wrapper .content-block .text__tools .img_bookmark {
+      left: 20px; }
+
+footer {
+  margin-top: 5%;
+  background: #f1edec; }
+  footer .wrapper {
+    width: 86%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; }
+    footer .wrapper .mail {
+      flex-basis: 35%; }
+      footer .wrapper .mail h3 {
+        margin-top: 7%;
+        color: grey; }
+      footer .wrapper .mail__form {
+        width: 80%;
+        margin-top: 5%;
+        border-bottom: 1px solid black;
+        padding: 2% 0;
+        display: flex;
+        justify-content: space-between; }
+        footer .wrapper .mail__form input {
+          background-color: #f1edec;
+          border: none;
+          font-size: 1.2em; }
+    footer .wrapper .social {
+      flex-basis: 35%; }
+      footer .wrapper .social h3 {
+        margin-top: 7%;
+        color: grey; }
+      footer .wrapper .social__img {
+        display: flex;
+        margin-top: 5%; }
+        footer .wrapper .social__img img {
+          margin-right: 5%; }
+    footer .wrapper .description {
+      flex-basis: 30%;
+      line-height: 30px;
+      margin: 3% 0;
+      color: grey;
+      text-align: justify; }

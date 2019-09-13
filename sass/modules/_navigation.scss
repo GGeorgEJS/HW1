@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     border-bottom: 1px solid $grey;
+    z-index: 1;
     img{
         width: 85%;
     }
@@ -41,7 +42,11 @@
     height: 94vh;
     background-color: $white;
     position: fixed;
-    top: 6%;
     border-right: 1px solid $grey;
     padding: 1%;
+    z-index: 0;
+    img{
+        position: absolute;
+        top: 8%;
+    }
 }

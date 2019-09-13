@@ -8,6 +8,11 @@
                 &__info{
                     direction: ltr;
                 }
+                &__tools{
+                    .img_bookmark{
+                        left: 20px;
+                    }
+                }
             }
         }
     }

@@ -26,9 +26,12 @@
             &__tools{
                 @include flex_between;
                 width: 15%;
-                div{
+                .btn{
                     @include button;
                     padding: 4% 14%;
+                }
+                .img_bookmark{
+                    @include img;
                 }
             }
         }

@@ -15,11 +15,13 @@
         background-position-y: 50%;
         .text{
             margin-left: 4%;
-            width: 61%;
-            height: 59%;
+            width: 45%;
             @include text;
             p{
-                width: 65%;
+                width: 80%;
+            }
+            .text__tools{
+                @include img_right;
             }
         }
     }

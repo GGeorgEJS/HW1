@@ -4,6 +4,9 @@
        .content-block{
            .text{
                margin: 0 0 -4% -7%;
+               &__tools{
+                   @include img_right;
+               }
            }
        }
     }
