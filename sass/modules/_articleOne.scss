@@ -1,56 +1,70 @@
-.one{
+.one {
     background: url('../images/common/bearBears.jpg') no-repeat;
     background-size: cover;
     background-position-y: 50%;
     height: 60vh;
-    @include sm{
+
+    @include sm {
         margin-bottom: 27%;
     }
-    .wrapper{
-        @include  wigth_height;
+
+    .wrapper {
+        @include wigth_height;
         background-color: rgba($color: #000000, $alpha: .4);
         display: flex;
         align-items: center;
         position: relative;
-        .content{
+
+        .content {
             margin-left: 7%;
-            @include sm{
+
+            @include sm {
                 position: absolute;
-                top:  52%;
+                top: 41%;
             }
-            p{
+
+            p {
                 width: 61%;
                 font-size: 4em;
                 color: $white;
-                @include sm{
+                @include font-face;
+
+                @include sm {
                     width: 79%;
                     font-size: 1.5em;
                 }
             }
-            &__info{
+
+            &__info {
                 @include inf;
                 width: 22%;
+                color: lightgrey;
                 margin: 2% 0;
-                @include sm{
+
+                @include sm {
                     width: 57%;
                     margin: 7% 0;
                 }
             }
-            &__tools{
-                @include flex_between;
-                width: 15%;
-                @include sm{
-                    width: 36%;
+
+            &__tools {
+                display: flex;
+                width: 52%;
+
+                @include sm {
+                    width: 100%;
                 }
-                .btn{
+
+                .btn {
                     @include button;
-                    padding: 4% 14%;
+                    margin-right: 5%;
                 }
-                .img_bookmark{
+
+                .img_bookmark {
                     @include img;
                 }
             }
         }
     }
-    
+
 }

@@ -1,12 +1,19 @@
 // @import url(../builds/fonts/Lora-Bold.ttf);
 
 
+
+
 $font-main: Lora-Bold;
 
 $main-color: rgb(252, 214, 0);
-$black: rgb(0,0,0);
+$black: rgb(0, 0, 0);
 $white: rgb(255, 255, 255);
 $red: rgb(235, 55, 55);
 $grey: #f1edec;
 
-
+@font-face {
+    font-family: "Lora-Bold";
+    src: url("../fonts/Lora-Bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+}

@@ -1,20 +1,23 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-li{
+
+
+
+li {
     list-style: none;
 }
 
-img{
+img {
     max-width: 100%;
 }
 
-h2{
+h2 {
     margin: 5% 0;
     color: $main-color;
-    @include sm{
+
+    @include sm {
         font-size: 1em;
     }
 }
-

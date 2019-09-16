@@ -1,76 +1,102 @@
-@mixin inf{
+@mixin inf {
     display: flex;
     justify-content: space-between;
-    color: lightgrey;
-    div{
+
+
+    div {
         display: flex;
         align-items: center;
     }
 }
-@mixin wigth_height{
+
+@mixin wigth_height {
     width: 100%;
     height: 100%;
 }
 
-@mixin flex_between{
+@mixin flex_between {
     display: flex;
     justify-content: space-between;
 }
 
-@mixin button{
+@mixin button {
     background-color: $main-color;
+    width: 20%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.5em;
     border-radius: 50px;
-    @include sm{
+    cursor: pointer;
+
+    @include sm {
         font-size: 1em;
+        width: 25%;
+        height: 28px;
     }
 }
 
-@mixin container{
+@mixin container {
     width: 86%;
     margin: 0 auto;
     @include flex_between;
-    @include sm{
+
+    @include sm {
         flex-wrap: wrap;
     }
-    &__block{
+
+    &__block {
         width: 30%;
-        @include sm{
+
+        @include sm {
             width: 100%;
         }
-        .img{
-            img{
+
+        .img {
+            img {
                 width: 100%;
             }
         }
-        .info{
-            @include flex_between;
+
+        .info {
+            @include inf;
             margin: 4% 0;
-            .img_bookmark{
+
+            .img_bookmark {
                 position: relative;
                 top: -34px;
                 right: 25px;
                 background: url("../images/UI/bookmark_big.svg");
                 width: 23px;
                 height: 29px;
-                @include sm{
+                cursor: pointer;
+                background-size: cover;
+
+                @include sm {
                     top: -27px;
                     right: 25px;
-                    width: 21px;
-                    height: 28px;
+                    width: 23px;
+                    height: 29px;
                 }
-                &:hover{
+
+                &:hover {
                     background: url("../images/UI/bookmark_active.svg");
-                    width: 26px;
-                    height: 31px; 
+                    width: 23px;
+                    height: 29px;
+                    background-size: cover;
+
                 }
             }
         }
-        p{
+
+        p {
             font-size: 1.6em;
             font-weight: bold;
             width: 74%;
-            @include sm{
+            @include font-face;
+
+            @include sm {
                 width: 87%;
                 font-size: 1.2em;
             }
@@ -78,100 +104,120 @@
     }
 }
 
-@mixin text{
+@mixin text {
     border: 2px solid black;
     background: $white;
     position: relative;
-    .text__info{
-        @include flex_between;
-        padding: 4%;
-        width: 39%;
-        @include sm{
-            width: 61%;
+
+    &__info {
+        @include inf;
+        width: 44%;
+        margin: 2% 4%;
+
+        @include sm {
+            width: 57%;
+            margin: 7% 0;
         }
     }
-    p{
+
+    p {
         padding: 4%;
         font-size: 3em;
         width: 125%;
         font-weight: bold;
-        @include sm{
-            font-size: 1.5em;
-            width: 82%;
+        @include font-face;
+
+        @include sm {
+            font-size: 1.1em;
+            width: 96%;
         }
     }
-    .text__tools{
+
+    .text__tools {
         @include flex_between;
         width: 91%;
         margin: 0 auto;
 
 
-        .btn{
+        .btn {
             @include button;
-            padding: 1% 3%;
             margin: 5% 0;
         }
-        .img_bookmark{
+
+        .img_bookmark {
             position: absolute;
             bottom: -18px;
             background: url("../images/UI/bookmark_big.svg");
             width: 23px;
             height: 29px;
-            
-            &:hover{
+            background-size: cover;
+            cursor: pointer;
+
+            &:hover {
                 background: url("../images/UI/bookmark_active.svg");
-                width: 26px;
-                height: 31px; 
+                width: 23px;
+                height: 29px;
+                background-size: cover;
             }
         }
-        
+
     }
 }
 
-@mixin img_right{
-    .img_bookmark{
-       right: 20px; 
+@mixin img_right {
+    .img_bookmark {
+        right: 20px;
     }
 }
 
-@mixin wrapper{
+@mixin wrapper {
     display: flex;
     padding: 7%;
-    @include sm{
+
+    @include sm {
         flex-direction: column;
         padding: 0;
     }
-    .photo{
+
+    .photo {
         width: 50%;
         border-bottom: 3px solid red;
-        @include sm{
+
+        @include sm {
             width: 100%;
         }
-        img{
-            @include  wigth_height;
+
+        img {
+            @include wigth_height;
         }
     }
-    .content-block{
+
+    .content-block {
         width: 42%;
         display: flex;
         flex-direction: column;
-        @include sm{
+
+        @include sm {
             width: 90%;
             position: relative;
             margin: -9% auto;
         }
-        &__title{
+
+        &__title {
             align-self: flex-end;
             color: $main-color;
-            @include sm{
+
+            @include sm {
                 position: absolute;
-                top: -76%;
+                top: -90%;
                 left: 0;
             }
         }
-        .text{
+
+        .text {
             @include text;
-            @include sm{
+
+            @include sm {
                 margin: 0;
             }
         }
@@ -179,20 +225,26 @@
 }
 
 
-@mixin img{
+@mixin img {
     background: url("../images/UI/bookmark_big.svg");
     width: 23px;
     height: 29px;
-    &:hover{
+    background-size: cover;
+
+    &:hover {
         background: url("../images/UI/bookmark_active.svg");
-        width: 26px;
-        height: 31px;
+        width: 23px;
+        height: 29px;
+        background-size: cover;
     }
 }
 
-@mixin sm{
-    @media screen and (max-width: 600px){
+@mixin sm {
+    @media screen and (max-width: 600px) {
         @content;
     }
 }
-    
+
+@mixin font-face {
+    font-family: "Lora-Bold";
+}

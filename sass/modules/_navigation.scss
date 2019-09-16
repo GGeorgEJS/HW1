@@ -1,11 +1,13 @@
-.burger_mobile{
+.burder_mobile {
     display: none;
-    @include sm{
+
+    @include sm {
         display: block;
         margin: 2%;
     }
 }
-.header__logo{
+
+.header__logo {
     flex-basis: 8%;
     display: flex;
     align-items: center;
@@ -13,101 +15,214 @@
     background: $white;
     border-bottom: 1px solid $grey;
     z-index: 2;
-    @include sm{
+
+    @include sm {
         flex-basis: 35%;
         border: none;
         color: white;
         background: inherit;
     }
-    img{
+
+    img {
         width: 85%;
     }
 }
-.header__menu{
+
+.header__menu {
     flex-basis: 87%;
     @include flex_between;
     align-items: center;
+    z-index: 2;
     border-right: 2px solid $grey;
     border-left: 2px solid $grey;
-    @include sm{
+
+    @include sm {
         border: none;
         flex-basis: 100%;
         order: 4;
     }
-    .option{
+
+    .option {
         @include flex_between;
         align-items: center;
         width: 6%;
         padding: 8px;
+        margin: 0 2%;
         background-color: $main-color;
         border-radius: 50px;
-        @include sm{
+
+        @include sm {
             width: 100%;
-            background-color: inherit; 
+            background-color: inherit;
             color: white;
         }
-        .figure{
+
+        .figure {
             width: 10px;
             height: 10px;
             border-right: 2px solid $black;
             border-bottom: 2px solid $black;
             transform: rotate(45deg);
+
             @include sm {
                 display: none;
             }
         }
-        div{
-            @include sm{
+
+        div {
+            @include sm {
                 @include flex_between;
                 width: 100%;
 
             }
-            .hover{
+
+            .hover {
                 display: none;
-                @include sm{
+
+                @include sm {
                     display: block;
                 }
             }
         }
     }
-    ul{
+
+    ul {
         width: 28%;
         display: flex;
         justify-content: space-around;
         font-weight: bold;
+
         @include sm {
             display: none;
         }
     }
 }
-.header__tools{
+
+.header__tools {
     flex-basis: 5%;
     display: flex;
     justify-content: space-around;
-    @include sm{
+
+    @include sm {
         order: 3;
         flex-basis: 10%;
     }
-    .hide{
-        @include sm{
+
+    .hide {
+        @include sm {
             display: none;
         }
     }
 }
 
-.header__leftMenu{
-    width: 23px;
-    height: 94vh;
-    background-color: $white;
+.header__leftMenu {
+    height: 100vh;
+    width: 100%;
     position: fixed;
     border-right: 1px solid $grey;
-    padding: 1%;
     z-index: 1;
-    img{
-        position: absolute;
-        top: 8%;
+    pointer-events: none;
+
+    .wrapper_leftBurger {
+        width: 3%;
+        height: 100%;
+        background: $white;
+        pointer-events: all;
+        border-right: 1px solid $grey;
+
+        .left_burger {
+            position: absolute;
+            top: 8%;
+            left: 1%;
+            background: url("../images/UI/burger.svg");
+            width: 23px;
+            height: 19px;
+            cursor: pointer;
+        }
+
     }
-    @include sm{
+
+    .left_option {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+        top: 0;
+        left: 3%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.3);
+        transition: all .5s ease-in-out;
+
+        ul {
+            width: 15%;
+            transform: translateX(-107%);
+            height: 100%;
+            background: $white;
+            padding: 6%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform .5s ease-in-out;
+
+
+            li {
+                font-size: 1.6em;
+                width: 100%;
+                margin: 9% 0;
+                position: relative;
+                transition: all .5s ease-in;
+                cursor: pointer;
+
+                span {
+                    display: inline-block;
+                    position: absolute;
+                    top: 40%;
+                    left: -19%;
+                    width: 0px;
+                    height: 5px;
+                    background: rgb(226, 70, 70);
+                    transition: all .2s ease-in;
+                }
+
+                .active {
+                    width: 40px;
+                    background: $main-color;
+                }
+
+                &:hover span {
+                    width: 40px;
+                }
+            }
+        }
+    }
+
+
+
+    input[type=checkbox] {
         display: none;
     }
+
+    input[type=checkbox]:checked~.wrapper_leftBurger {
+        .left_burger {
+            background: url("../images/UI/close.svg");
+            width: 19px;
+        }
+    }
+
+    input[type=checkbox]:checked~.left_option {
+        opacity: 1;
+        pointer-events: all;
+
+        ul {
+            transform: translateX(0);
+        }
+    }
+
+    @include sm {
+        display: none;
+    }
+
+    // &::after {
+    //     width: 100%;
+    // }
 }

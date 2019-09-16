@@ -1,11 +1,13 @@
-.four{
+.four {
     width: 86%;
     margin: 0 auto;
-    &__title{
+
+    &__title {
         color: $main-color;
         margin: 5% 0;
     }
-    &__wrapper{
+
+    &__wrapper {
         background: url("../images/common/cute-brain-cartoon2.jpeg");
         width: 100%;
         height: 80vh;
@@ -13,20 +15,21 @@
         align-items: center;
         background-size: cover;
         background-position-y: 50%;
-        @include sm{
+
+        @include sm {
             height: 55vh;
         }
-        .text{
+
+        .text {
             margin-left: 4%;
             width: 45%;
             @include text;
-            @include sm{
+
+            @include sm {
                 width: 90%;
             }
-            p{
-                width: 80%;
-            }
-            .text__tools{
+
+            .text__tools {
                 @include img_right;
             }
         }
