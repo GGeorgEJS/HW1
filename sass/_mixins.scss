@@ -21,32 +21,44 @@
     background-color: $main-color;
     font-size: 1.5em;
     border-radius: 50px;
+    @include sm{
+        font-size: 1em;
+    }
 }
 
 @mixin container{
     width: 86%;
     margin: 0 auto;
     @include flex_between;
+    @include sm{
+        flex-wrap: wrap;
+    }
     &__block{
         width: 30%;
+        @include sm{
+            width: 100%;
+        }
         .img{
             img{
                 width: 100%;
             }
         }
-        h2{
-            padding: 3% 0 ;
-            color: $main-color;
-        }
         .info{
             @include flex_between;
+            margin: 4% 0;
             .img_bookmark{
                 position: relative;
-                top: -15px;
+                top: -34px;
                 right: 25px;
                 background: url("../images/UI/bookmark_big.svg");
                 width: 23px;
                 height: 29px;
+                @include sm{
+                    top: -27px;
+                    right: 25px;
+                    width: 21px;
+                    height: 28px;
+                }
                 &:hover{
                     background: url("../images/UI/bookmark_active.svg");
                     width: 26px;
@@ -55,9 +67,13 @@
             }
         }
         p{
-            font-size: 1.2em;
+            font-size: 1.6em;
             font-weight: bold;
             width: 74%;
+            @include sm{
+                width: 87%;
+                font-size: 1.2em;
+            }
         }
     }
 }
@@ -70,10 +86,19 @@
         @include flex_between;
         padding: 4%;
         width: 39%;
+        @include sm{
+            width: 61%;
+        }
     }
     p{
         padding: 4%;
         font-size: 3em;
+        width: 125%;
+        font-weight: bold;
+        @include sm{
+            font-size: 1.5em;
+            width: 82%;
+        }
     }
     .text__tools{
         @include flex_between;
@@ -112,9 +137,16 @@
 @mixin wrapper{
     display: flex;
     padding: 7%;
+    @include sm{
+        flex-direction: column;
+        padding: 0;
+    }
     .photo{
         width: 50%;
         border-bottom: 3px solid red;
+        @include sm{
+            width: 100%;
+        }
         img{
             @include  wigth_height;
         }
@@ -123,15 +155,24 @@
         width: 42%;
         display: flex;
         flex-direction: column;
+        @include sm{
+            width: 90%;
+            position: relative;
+            margin: -9% auto;
+        }
         &__title{
             align-self: flex-end;
             color: $main-color;
+            @include sm{
+                position: absolute;
+                top: -76%;
+                left: 0;
+            }
         }
         .text{
             @include text;
-            p{
-                width: 125%;
-                font-weight: bold;
+            @include sm{
+                margin: 0;
             }
         }
     }
@@ -146,6 +187,12 @@
         background: url("../images/UI/bookmark_active.svg");
         width: 26px;
         height: 31px;
+    }
+}
+
+@mixin sm{
+    @media screen and (max-width: 600px){
+        @content;
     }
 }
     

@@ -1,40 +1,98 @@
+.burger_mobile{
+    display: none;
+    @include sm{
+        display: block;
+        margin: 2%;
+    }
+}
 .header__logo{
     flex-basis: 8%;
     display: flex;
+    align-items: center;
     justify-content: center;
+    background: $white;
     border-bottom: 1px solid $grey;
-    z-index: 1;
+    z-index: 2;
+    @include sm{
+        flex-basis: 35%;
+        border: none;
+        color: white;
+        background: inherit;
+    }
     img{
         width: 85%;
     }
 }
 .header__menu{
     flex-basis: 87%;
-    display: flex;
-    justify-content: space-between;
+    @include flex_between;
     align-items: center;
     border-right: 2px solid $grey;
     border-left: 2px solid $grey;
-    select{
-        width: 6%;
-        height: 28px;
-        margin-left: 15px;
-        background-color: $main-color;
-        font-weight: bold;
+    @include sm{
         border: none;
+        flex-basis: 100%;
+        order: 4;
+    }
+    .option{
+        @include flex_between;
+        align-items: center;
+        width: 6%;
+        padding: 8px;
+        background-color: $main-color;
         border-radius: 50px;
+        @include sm{
+            width: 100%;
+            background-color: inherit; 
+            color: white;
+        }
+        .figure{
+            width: 10px;
+            height: 10px;
+            border-right: 2px solid $black;
+            border-bottom: 2px solid $black;
+            transform: rotate(45deg);
+            @include sm {
+                display: none;
+            }
+        }
+        div{
+            @include sm{
+                @include flex_between;
+                width: 100%;
+
+            }
+            .hover{
+                display: none;
+                @include sm{
+                    display: block;
+                }
+            }
+        }
     }
     ul{
         width: 28%;
         display: flex;
         justify-content: space-around;
         font-weight: bold;
+        @include sm {
+            display: none;
+        }
     }
 }
 .header__tools{
     flex-basis: 5%;
     display: flex;
     justify-content: space-around;
+    @include sm{
+        order: 3;
+        flex-basis: 10%;
+    }
+    .hide{
+        @include sm{
+            display: none;
+        }
+    }
 }
 
 .header__leftMenu{
@@ -44,9 +102,12 @@
     position: fixed;
     border-right: 1px solid $grey;
     padding: 1%;
-    z-index: 0;
+    z-index: 1;
     img{
         position: absolute;
         top: 8%;
+    }
+    @include sm{
+        display: none;
     }
 }

@@ -10,3 +10,11 @@ img{
     max-width: 100%;
 }
 
+h2{
+    margin: 5% 0;
+    color: $main-color;
+    @include sm{
+        font-size: 1em;
+    }
+}
+

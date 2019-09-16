@@ -13,10 +13,16 @@
         align-items: center;
         background-size: cover;
         background-position-y: 50%;
+        @include sm{
+            height: 55vh;
+        }
         .text{
             margin-left: 4%;
             width: 45%;
             @include text;
+            @include sm{
+                width: 90%;
+            }
             p{
                 width: 80%;
             }

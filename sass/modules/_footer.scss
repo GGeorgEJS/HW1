@@ -5,8 +5,15 @@ footer{
         width: 86%;
         margin: 0 auto;
         @include flex_between;
+        @include sm{
+            flex-direction: column;
+        }
         .mail{
             flex-basis: 35%;
+            @include sm{
+                margin: 10% 0;
+            }
+
             h3{
                 margin-top: 7%;
                 color: grey;
@@ -26,6 +33,9 @@ footer{
         }
         .social{
             flex-basis: 35%;
+            @include sm{
+                margin: 10% 0;
+            }
             h3{
                 margin-top: 7%;
                 color: grey;

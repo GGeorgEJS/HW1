@@ -8,18 +8,46 @@ li {
 img {
   max-width: 100%; }
 
+h2 {
+  margin: 5% 0;
+  color: #fcd600; }
+  @media screen and (max-width: 600px) {
+    h2 {
+      font-size: 1em; } }
+
 header {
   width: 100%;
   height: 6vh;
   display: flex;
   justify-content: space-between; }
+  @media screen and (max-width: 600px) {
+    header {
+      background-color: #eb3737;
+      height: 13vh;
+      align-items: center;
+      flex-wrap: wrap; } }
+
+.burger_mobile {
+  display: none; }
+  @media screen and (max-width: 600px) {
+    .burger_mobile {
+      display: block;
+      margin: 2%; } }
 
 .header__logo {
   flex-basis: 8%;
   display: flex;
+  align-items: center;
   justify-content: center;
+  background: white;
   border-bottom: 1px solid #f1edec;
-  z-index: 1; }
+  z-index: 2; }
+  @media screen and (max-width: 600px) {
+    .header__logo {
+      flex-basis: 35%;
+      border: none;
+      color: white;
+      background: inherit; } }
   .header__logo img {
     width: 85%; }
 
@@ -30,24 +58,63 @@ header {
   align-items: center;
   border-right: 2px solid #f1edec;
   border-left: 2px solid #f1edec; }
-  .header__menu select {
+  @media screen and (max-width: 600px) {
+    .header__menu {
+      border: none;
+      flex-basis: 100%;
+      order: 4; } }
+  .header__menu .option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 6%;
-    height: 28px;
-    margin-left: 15px;
+    padding: 8px;
     background-color: #fcd600;
-    font-weight: bold;
-    border: none;
     border-radius: 50px; }
+    @media screen and (max-width: 600px) {
+      .header__menu .option {
+        width: 100%;
+        background-color: inherit;
+        color: white; } }
+    .header__menu .option .figure {
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid black;
+      border-bottom: 2px solid black;
+      transform: rotate(45deg); }
+      @media screen and (max-width: 600px) {
+        .header__menu .option .figure {
+          display: none; } }
+    @media screen and (max-width: 600px) {
+      .header__menu .option div {
+        display: flex;
+        justify-content: space-between;
+        width: 100%; } }
+    .header__menu .option div .hover {
+      display: none; }
+      @media screen and (max-width: 600px) {
+        .header__menu .option div .hover {
+          display: block; } }
   .header__menu ul {
     width: 28%;
     display: flex;
     justify-content: space-around;
     font-weight: bold; }
+    @media screen and (max-width: 600px) {
+      .header__menu ul {
+        display: none; } }
 
 .header__tools {
   flex-basis: 5%;
   display: flex;
   justify-content: space-around; }
+  @media screen and (max-width: 600px) {
+    .header__tools {
+      order: 3;
+      flex-basis: 10%; } }
+  @media screen and (max-width: 600px) {
+    .header__tools .hide {
+      display: none; } }
 
 .header__leftMenu {
   width: 23px;
@@ -56,30 +123,43 @@ header {
   position: fixed;
   border-right: 1px solid #f1edec;
   padding: 1%;
-  z-index: 0; }
+  z-index: 1; }
   .header__leftMenu img {
     position: absolute;
     top: 8%; }
+  @media screen and (max-width: 600px) {
+    .header__leftMenu {
+      display: none; } }
 
 .one {
   background: url("../images/common/bearBears.jpg") no-repeat;
   background-size: cover;
   background-position-y: 50%;
   height: 60vh; }
+  @media screen and (max-width: 600px) {
+    .one {
+      margin-bottom: 27%; } }
   .one .wrapper {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     display: flex;
-    align-items: center; }
+    align-items: center;
+    position: relative; }
     .one .wrapper .content {
       margin-left: 7%; }
-      .one .wrapper .content h2 {
-        color: #fcd600; }
+      @media screen and (max-width: 600px) {
+        .one .wrapper .content {
+          position: absolute;
+          top: 52%; } }
       .one .wrapper .content p {
         width: 61%;
         font-size: 4em;
         color: white; }
+        @media screen and (max-width: 600px) {
+          .one .wrapper .content p {
+            width: 79%;
+            font-size: 1.5em; } }
       .one .wrapper .content__info {
         display: flex;
         justify-content: space-between;
@@ -89,15 +169,25 @@ header {
         .one .wrapper .content__info div {
           display: flex;
           align-items: center; }
+        @media screen and (max-width: 600px) {
+          .one .wrapper .content__info {
+            width: 57%;
+            margin: 7% 0; } }
       .one .wrapper .content__tools {
         display: flex;
         justify-content: space-between;
         width: 15%; }
+        @media screen and (max-width: 600px) {
+          .one .wrapper .content__tools {
+            width: 36%; } }
         .one .wrapper .content__tools .btn {
           background-color: #fcd600;
           font-size: 1.5em;
           border-radius: 50px;
           padding: 4% 14%; }
+          @media screen and (max-width: 600px) {
+            .one .wrapper .content__tools .btn {
+              font-size: 1em; } }
         .one .wrapper .content__tools .img_bookmark {
           background: url("../images/UI/bookmark_big.svg");
           width: 23px;
@@ -107,12 +197,23 @@ header {
             width: 26px;
             height: 31px; }
 
+@media screen and (max-width: 600px) {
+  .two {
+    margin-bottom: 23%; } }
+
 .two .wrapper {
   display: flex;
   padding: 7%; }
+  @media screen and (max-width: 600px) {
+    .two .wrapper {
+      flex-direction: column;
+      padding: 0; } }
   .two .wrapper .photo {
     width: 50%;
     border-bottom: 3px solid red; }
+    @media screen and (max-width: 600px) {
+      .two .wrapper .photo {
+        width: 100%; } }
     .two .wrapper .photo img {
       width: 100%;
       height: 100%; }
@@ -120,9 +221,19 @@ header {
     width: 42%;
     display: flex;
     flex-direction: column; }
+    @media screen and (max-width: 600px) {
+      .two .wrapper .content-block {
+        width: 90%;
+        position: relative;
+        margin: -9% auto; } }
     .two .wrapper .content-block__title {
       align-self: flex-end;
       color: #fcd600; }
+      @media screen and (max-width: 600px) {
+        .two .wrapper .content-block__title {
+          position: absolute;
+          top: -76%;
+          left: 0; } }
     .two .wrapper .content-block .text {
       border: 2px solid black;
       background: white;
@@ -132,9 +243,18 @@ header {
         justify-content: space-between;
         padding: 4%;
         width: 39%; }
+        @media screen and (max-width: 600px) {
+          .two .wrapper .content-block .text .text__info {
+            width: 61%; } }
       .two .wrapper .content-block .text p {
         padding: 4%;
-        font-size: 3em; }
+        font-size: 3em;
+        width: 125%;
+        font-weight: bold; }
+        @media screen and (max-width: 600px) {
+          .two .wrapper .content-block .text p {
+            font-size: 1.5em;
+            width: 82%; } }
       .two .wrapper .content-block .text .text__tools {
         display: flex;
         justify-content: space-between;
@@ -146,6 +266,9 @@ header {
           border-radius: 50px;
           padding: 1% 3%;
           margin: 5% 0; }
+          @media screen and (max-width: 600px) {
+            .two .wrapper .content-block .text .text__tools .btn {
+              font-size: 1em; } }
         .two .wrapper .content-block .text .text__tools .img_bookmark {
           position: absolute;
           bottom: -18px;
@@ -156,11 +279,14 @@ header {
             background: url("../images/UI/bookmark_active.svg");
             width: 26px;
             height: 31px; }
-      .two .wrapper .content-block .text p {
-        width: 125%;
-        font-weight: bold; }
+      @media screen and (max-width: 600px) {
+        .two .wrapper .content-block .text {
+          margin: 0; } }
   .two .wrapper .content-block .text {
     margin: 0 0 -4% -7%; }
+    @media screen and (max-width: 600px) {
+      .two .wrapper .content-block .text {
+        margin: 0; } }
     .two .wrapper .content-block .text__tools .img_bookmark {
       right: 20px; }
 
@@ -169,31 +295,45 @@ header {
   margin: 0 auto;
   display: flex;
   justify-content: space-between; }
+  @media screen and (max-width: 600px) {
+    .container {
+      flex-wrap: wrap; } }
   .container__block {
     width: 30%; }
+    @media screen and (max-width: 600px) {
+      .container__block {
+        width: 100%; } }
     .container__block .img img {
       width: 100%; }
-    .container__block h2 {
-      padding: 3% 0;
-      color: #fcd600; }
     .container__block .info {
       display: flex;
-      justify-content: space-between; }
+      justify-content: space-between;
+      margin: 4% 0; }
       .container__block .info .img_bookmark {
         position: relative;
-        top: -15px;
+        top: -34px;
         right: 25px;
         background: url("../images/UI/bookmark_big.svg");
         width: 23px;
         height: 29px; }
+        @media screen and (max-width: 600px) {
+          .container__block .info .img_bookmark {
+            top: -27px;
+            right: 25px;
+            width: 21px;
+            height: 28px; } }
         .container__block .info .img_bookmark:hover {
           background: url("../images/UI/bookmark_active.svg");
           width: 26px;
           height: 31px; }
     .container__block p {
-      font-size: 1.2em;
+      font-size: 1.6em;
       font-weight: bold;
       width: 74%; }
+      @media screen and (max-width: 600px) {
+        .container__block p {
+          width: 87%;
+          font-size: 1.2em; } }
 
 .four {
   width: 86%;
@@ -209,6 +349,9 @@ header {
     align-items: center;
     background-size: cover;
     background-position-y: 50%; }
+    @media screen and (max-width: 600px) {
+      .four__wrapper {
+        height: 55vh; } }
     .four__wrapper .text {
       margin-left: 4%;
       width: 45%;
@@ -220,9 +363,18 @@ header {
         justify-content: space-between;
         padding: 4%;
         width: 39%; }
+        @media screen and (max-width: 600px) {
+          .four__wrapper .text .text__info {
+            width: 61%; } }
       .four__wrapper .text p {
         padding: 4%;
-        font-size: 3em; }
+        font-size: 3em;
+        width: 125%;
+        font-weight: bold; }
+        @media screen and (max-width: 600px) {
+          .four__wrapper .text p {
+            font-size: 1.5em;
+            width: 82%; } }
       .four__wrapper .text .text__tools {
         display: flex;
         justify-content: space-between;
@@ -234,6 +386,9 @@ header {
           border-radius: 50px;
           padding: 1% 3%;
           margin: 5% 0; }
+          @media screen and (max-width: 600px) {
+            .four__wrapper .text .text__tools .btn {
+              font-size: 1em; } }
         .four__wrapper .text .text__tools .img_bookmark {
           position: absolute;
           bottom: -18px;
@@ -244,6 +399,9 @@ header {
             background: url("../images/UI/bookmark_active.svg");
             width: 26px;
             height: 31px; }
+      @media screen and (max-width: 600px) {
+        .four__wrapper .text {
+          width: 90%; } }
       .four__wrapper .text p {
         width: 80%; }
       .four__wrapper .text .text__tools .img_bookmark {
@@ -257,39 +415,64 @@ header {
     margin: 0 auto;
     display: flex;
     justify-content: space-between; }
+    @media screen and (max-width: 600px) {
+      .five .container {
+        flex-wrap: wrap; } }
     .five .container__block {
       width: 30%; }
+      @media screen and (max-width: 600px) {
+        .five .container__block {
+          width: 100%; } }
       .five .container__block .img img {
         width: 100%; }
-      .five .container__block h2 {
-        padding: 3% 0;
-        color: #fcd600; }
       .five .container__block .info {
         display: flex;
-        justify-content: space-between; }
+        justify-content: space-between;
+        margin: 4% 0; }
         .five .container__block .info .img_bookmark {
           position: relative;
-          top: -15px;
+          top: -34px;
           right: 25px;
           background: url("../images/UI/bookmark_big.svg");
           width: 23px;
           height: 29px; }
+          @media screen and (max-width: 600px) {
+            .five .container__block .info .img_bookmark {
+              top: -27px;
+              right: 25px;
+              width: 21px;
+              height: 28px; } }
           .five .container__block .info .img_bookmark:hover {
             background: url("../images/UI/bookmark_active.svg");
             width: 26px;
             height: 31px; }
       .five .container__block p {
-        font-size: 1.2em;
+        font-size: 1.6em;
         font-weight: bold;
         width: 74%; }
+        @media screen and (max-width: 600px) {
+          .five .container__block p {
+            width: 87%;
+            font-size: 1.2em; } }
+
+@media screen and (max-width: 600px) {
+  .six {
+    margin: 33% 0; } }
 
 .six .wrapper {
   display: flex;
   padding: 7%;
   direction: rtl; }
+  @media screen and (max-width: 600px) {
+    .six .wrapper {
+      flex-direction: column;
+      padding: 0; } }
   .six .wrapper .photo {
     width: 50%;
     border-bottom: 3px solid red; }
+    @media screen and (max-width: 600px) {
+      .six .wrapper .photo {
+        width: 100%; } }
     .six .wrapper .photo img {
       width: 100%;
       height: 100%; }
@@ -297,9 +480,19 @@ header {
     width: 42%;
     display: flex;
     flex-direction: column; }
+    @media screen and (max-width: 600px) {
+      .six .wrapper .content-block {
+        width: 90%;
+        position: relative;
+        margin: -9% auto; } }
     .six .wrapper .content-block__title {
       align-self: flex-end;
       color: #fcd600; }
+      @media screen and (max-width: 600px) {
+        .six .wrapper .content-block__title {
+          position: absolute;
+          top: -76%;
+          left: 0; } }
     .six .wrapper .content-block .text {
       border: 2px solid black;
       background: white;
@@ -309,9 +502,18 @@ header {
         justify-content: space-between;
         padding: 4%;
         width: 39%; }
+        @media screen and (max-width: 600px) {
+          .six .wrapper .content-block .text .text__info {
+            width: 61%; } }
       .six .wrapper .content-block .text p {
         padding: 4%;
-        font-size: 3em; }
+        font-size: 3em;
+        width: 125%;
+        font-weight: bold; }
+        @media screen and (max-width: 600px) {
+          .six .wrapper .content-block .text p {
+            font-size: 1.5em;
+            width: 82%; } }
       .six .wrapper .content-block .text .text__tools {
         display: flex;
         justify-content: space-between;
@@ -323,6 +525,9 @@ header {
           border-radius: 50px;
           padding: 1% 3%;
           margin: 5% 0; }
+          @media screen and (max-width: 600px) {
+            .six .wrapper .content-block .text .text__tools .btn {
+              font-size: 1em; } }
         .six .wrapper .content-block .text .text__tools .img_bookmark {
           position: absolute;
           bottom: -18px;
@@ -333,11 +538,14 @@ header {
             background: url("../images/UI/bookmark_active.svg");
             width: 26px;
             height: 31px; }
-      .six .wrapper .content-block .text p {
-        width: 125%;
-        font-weight: bold; }
+      @media screen and (max-width: 600px) {
+        .six .wrapper .content-block .text {
+          margin: 0; } }
   .six .wrapper .content-block .text {
     margin: 0 -7% -4% 0; }
+    @media screen and (max-width: 600px) {
+      .six .wrapper .content-block .text {
+        margin: 0; } }
     .six .wrapper .content-block .text__info {
       direction: ltr; }
     .six .wrapper .content-block .text__tools .img_bookmark {
@@ -351,8 +559,14 @@ footer {
     margin: 0 auto;
     display: flex;
     justify-content: space-between; }
+    @media screen and (max-width: 600px) {
+      footer .wrapper {
+        flex-direction: column; } }
     footer .wrapper .mail {
       flex-basis: 35%; }
+      @media screen and (max-width: 600px) {
+        footer .wrapper .mail {
+          margin: 10% 0; } }
       footer .wrapper .mail h3 {
         margin-top: 7%;
         color: grey; }
@@ -369,6 +583,9 @@ footer {
           font-size: 1.2em; }
     footer .wrapper .social {
       flex-basis: 35%; }
+      @media screen and (max-width: 600px) {
+        footer .wrapper .social {
+          margin: 10% 0; } }
       footer .wrapper .social h3 {
         margin-top: 7%;
         color: grey; }

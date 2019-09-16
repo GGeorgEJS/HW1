@@ -1,9 +1,16 @@
 .two{
+    @include sm{
+        margin-bottom: 23%; 
+    }
+    
     .wrapper{
        @include wrapper;
        .content-block{
            .text{
                margin: 0 0 -4% -7%;
+               @include sm{
+                   margin: 0;
+               }
                &__tools{
                    @include img_right;
                }
