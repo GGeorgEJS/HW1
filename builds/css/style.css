@@ -8,6 +8,10 @@
   margin: 0;
   padding: 0; }
 
+a {
+  text-decoration: none;
+  color: black; }
+
 li {
   list-style: none; }
 
@@ -132,7 +136,7 @@ header {
   z-index: 1;
   pointer-events: none; }
   .header__leftMenu .wrapper_leftBurger {
-    width: 3%;
+    width: 5%;
     height: 100%;
     background: white;
     pointer-events: all;
@@ -455,7 +459,7 @@ header {
         height: 55vh; } }
     .four__wrapper .text {
       margin-left: 4%;
-      width: 45%;
+      width: 47%;
       border: 2px solid black;
       background: white;
       position: relative; }

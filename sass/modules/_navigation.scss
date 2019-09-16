@@ -45,7 +45,8 @@
     .option {
         @include flex_between;
         align-items: center;
-        width: 6%;
+        width: 10%;
+        font-size: 1.2;
         padding: 8px;
         margin: 0 2%;
         background-color: $main-color;
